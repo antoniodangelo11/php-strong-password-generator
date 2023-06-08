@@ -19,16 +19,16 @@ include_once __DIR__ . '/functions.php'; ?>
 
 <body>
     <div class="container">
-        <h1>Generatore di Password</h1>
+        <h1 class="fw-bold">Generatore di Password</h1>
         <form method="get">
             <div class="mb-3 w-25">
-                Lunghezza Password: 
+                <div class="mb-3 fw-bold">Lunghezza Password:</div>
                 <input type="number" class="form-control" name="number">
             </div>
             <button type="submit" class="btn btn-primary">Genera</button>
-            <a href="/php-strong-password-generator" class="btn btn-danger">Annulla</a>
+            <a href="/php-strong-password-generator" class="btn btn-danger">Reset</a>
         </form>
-        <h2>La tua Password è: <?= generate_pw($number_rnd) ?></h2>
+        <h2 class="fw-bold mt-4">La tua Password è: <span class="text-danger"><?= generate_pw($number_rnd) ?></span></h2>
     </div>
 </body>
 

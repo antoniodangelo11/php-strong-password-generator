@@ -4,7 +4,7 @@ $number_rnd = $_GET['number'] ?? '';
 
 function generate_pw($num)
 {
-    $arrPass = str_split('abcdefghilmnopqrstuvzxkjywABCDEFGHILMNOPQRSTUVZXKJWY1234567890*#@%&£_-!?');
+    $arrPass = str_split('abcdefghilmnopqrstuvzxkjywABCDEFGHILMNOPQRSTUVZXKJWY1234567890*#@%&£_-!?^=.,;:');
     shuffle($arrPass);
     $pw = '';
 
@@ -14,4 +14,4 @@ function generate_pw($num)
         }
     };
     return $pw;
-} ?>
+};
