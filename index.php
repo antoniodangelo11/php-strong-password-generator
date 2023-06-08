@@ -20,15 +20,15 @@ include_once __DIR__ . '/functions.php'; ?>
 <body>
     <div class="container">
         <h1>Generatore di Password</h1>
-        <form>
+        <form method="get">
             <div class="mb-3 w-25">
                 Lunghezza Password: 
                 <input type="number" class="form-control" name="number">
             </div>
-            <button type="submit" class="btn btn-primary">Invia</button>
-            <a href="/php-strong-password-generator" class="btn btn-primary">Annulla</a>
+            <button type="submit" class="btn btn-primary">Genera</button>
+            <a href="/php-strong-password-generator" class="btn btn-danger">Annulla</a>
         </form>
-        <h2>La tua Password è: </h2>
+        <h2>La tua Password è: <?= generate_pw($number_rnd) ?></h2>
     </div>
 </body>
 
